@@ -4,7 +4,7 @@ import {
   ISpecificationRepository,
 } from "./ISpecificationRepository";
 
-export class SpecifivationsRepository implements ISpecificationRepository {
+export class SpecificationsRepository implements ISpecificationRepository {
   private specifications: Specification[];
 
   constructor() {
@@ -21,5 +21,12 @@ export class SpecifivationsRepository implements ISpecificationRepository {
     });
 
     this.specifications.push(specification);
+  }
+
+  findByName(name: string): Specification {
+    const specification = this.specifications.find(
+      (specification) => specification.name === name
+    );
+    return specification;
   }
 }
