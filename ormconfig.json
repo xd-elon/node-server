@@ -9,13 +9,13 @@
       "migrationsDir": "./src/database/migrations"
     },
     "entities": [
-      "src/entity/**/*.ts"
+      "./src/database/entity/**/*.ts"
     ],
     "migrations": [
-      "src/migration/**/*.ts"
+      "./src/database/migrations/**/*.ts"
     ],
     "subscribers": [
-      "src/subscriber/**/*.ts"
+      "./src/database/subscriber/**/*.ts"
     ]
     
  }
