@@ -9,7 +9,7 @@
       "migrationsDir": "./src/database/migrations"
     },
     "entities": [
-      "./src/database/entity/**/*.ts"
+      "./src/database/entities/**/*.ts"
     ],
     "migrations": [
       "./src/database/migrations/**/*.ts"
