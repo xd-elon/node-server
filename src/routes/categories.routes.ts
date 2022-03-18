@@ -12,12 +12,11 @@ const upload = multer({
 });
 
 categoriesRoutes.post("/", (request, response) => {
-  console.log("atualizado");
   return createCategoryController().handle(request, response);
 });
 
 categoriesRoutes.get("/", (request, response) => {
-  return listCategoryController.handle(request, response);
+  return listCategoryController().handle(request, response);
 });
 
 categoriesRoutes.post("/import", upload.single("file"), (request, response) => {
