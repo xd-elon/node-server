@@ -1,10 +1,10 @@
 import { Specification } from "../../entities/Specification";
 import {
   ICreateSpecificationDTO,
-  ISpecificationRepository,
+  ISpecificationsRepository,
 } from "../ISpecificationRepository";
 
-export class SpecificationsRepository implements ISpecificationRepository {
+export class SpecificationsRepository implements ISpecificationsRepository {
   private specifications: Specification[];
 
   // eslint-disable-next-line no-use-before-define

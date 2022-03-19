@@ -1,8 +1,8 @@
 import { Specification } from "../../entities/Specification";
-import { ISpecificationRepository } from "../../repositories/ISpecificationRepository";
+import { ISpecificationsRepository } from "../../repositories/ISpecificationRepository";
 
 export class ListCategoriesUseCase {
-  constructor(private specificationsRepository: ISpecificationRepository) {}
+  constructor(private specificationsRepository: ISpecificationsRepository) {}
 
   execute(): Specification[] {
     const specifications = this.specificationsRepository.list();
