@@ -8,7 +8,7 @@ import "@shared/container";
 
 import { AppError } from "@errors/ApeError";
 
-import { router } from "./routes";
+import { router } from "./shared/infra/http/routes";
 import swaggerFile from "./swagger.json";
 
 const app = express();

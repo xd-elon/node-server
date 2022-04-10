@@ -1,10 +1,9 @@
 import { Router } from "express";
 
-// middleware
+import { CreateSpecificationController } from "@modules/cars/useCases/createSpecification/CreateSpecificationController";
+import { ListSpecificationsController } from "@modules/cars/useCases/listSpecifications/ListSpecificationsController";
+
 import { ensureAuthenticated } from "../middleware/ensureAuthenticated";
-//  middleware end
-import { CreateSpecificationController } from "../modules/cars/useCases/createSpecification/CreateSpecificationController";
-import { ListSpecificationsController } from "../modules/cars/useCases/listSpecifications/ListSpecificationsController";
 
 const specificationsRoutes = Router();
 
