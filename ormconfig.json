@@ -5,17 +5,10 @@
     "username": "docker",
     "password": "ignite",
     "database": "rentxdb",
+    "entities": ["./src/modules/**/entities/*.ts"],
+    "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
+    "subscribers": ["./src/subscriber/**/*.ts"],
     "cli": {
-      "migrationsDir": "./src/database/migrations"
-    },
-    "entities": [
-      "./src/modules/**/entities/*.ts"
-    ],
-    "migrations": [
-      "./src/database/migrations/**/*.ts"
-    ],
-    "subscribers": [
-      "./src/database/subscriber/**/*.ts"
-    ]
-    
+      "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    }
  }
