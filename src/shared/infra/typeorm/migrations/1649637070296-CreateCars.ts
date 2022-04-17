@@ -29,7 +29,7 @@ export class CreateCars1649637070296 implements MigrationInterface {
             default: true,
           },
           {
-            name: "licence_plate",
+            name: "license_plate",
             type: "varchar",
           },
           {
