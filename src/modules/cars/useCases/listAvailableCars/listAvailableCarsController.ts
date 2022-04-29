@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
+
 import { ListAvailableCarsUseCase } from "./listAvailableCarsUseCase";
 
 export class ListAvailableCarsController {
