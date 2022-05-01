@@ -68,4 +68,8 @@ export class CarsRepository implements ICarsRepository {
 
     return cars;
   }
+
+  async findById(id: string): Promise<Car> {
+    throw new Error("Method not implemented.");
+  }
 }
