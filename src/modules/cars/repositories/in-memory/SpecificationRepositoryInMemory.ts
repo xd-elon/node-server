@@ -5,7 +5,9 @@ import {
   ISpecificationsRepository,
 } from "../ISpecificationRepository";
 
-export class SpecificationInMemory implements ISpecificationsRepository {
+export class SpecificationReposotoryInMemory
+  implements ISpecificationsRepository
+{
   specifications: Specification[] = [];
 
   list(): Promise<Specification[]> {
