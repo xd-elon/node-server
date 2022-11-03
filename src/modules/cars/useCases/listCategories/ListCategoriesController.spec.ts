@@ -34,16 +34,16 @@ describe("Create Category Controller", () => {
       password: "admin",
     });
 
-    const { token } = responseToken.body;
+    const { refresh_token } = responseToken.body;
 
     const response = await request(app)
       .post("/categories")
       .send({
-        name: "category SUperTEST",
-        description: "Categorysupertest",
+        name: "Category SuperTest",
+        description: "Category SuperTest",
       })
       .set({
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${refresh_token}`,
       });
 
     expect(response.status).toBe(201);
@@ -55,21 +55,21 @@ describe("Create Category Controller", () => {
       password: "admin",
     });
 
-    const token = responseToken.body;
+    const { refresh_token } = responseToken.body;
 
     const response = await request(app)
       .post("/categories")
       .send({
-        name: "category SUperTEST",
-        description: "Categorysupertest",
+        name: "Category SuperTest",
+        description: "Category SuperTest",
       })
       .set({
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${refresh_token}`,
       });
 
     expect(response.status).toBe(200);
     expect(response.body.length).toBe(1);
     expect(response.body[0]).toHaveProperty("id");
-    expect(response.body[0].name).toHaveProperty("category SUperTEST");
+    expect(response.body[0].name).toHaveProperty("Category SuperTest");
   });
 });
